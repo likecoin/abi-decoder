@@ -7,7 +7,9 @@
     "test": "mocha test",
     "dist:es5lib": "babel index.js --out-dir dist/es5",
     "dist:browser": "webpack",
-    "dist": "npm run dist:es5lib && npm run dist:browser"
+    "dist": "npm run dist:es5lib && npm run dist:browser",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,8 @@
   "dependencies": {
     "@babel/runtime-corejs2": "^7.2.0",
     "web3-eth-abi": "^1.0.0-beta.46",
-    "web3-utils": "^1.0.0-beta.46"
+    "web3-utils": "^1.0.0-beta.46",
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
@@ -38,5 +41,6 @@
     "chai": "^3.5.0",
     "mocha": "^4.0.0",
     "webpack": "^2.7.0"
-  }
+  },
+  "snyk": true
 }
